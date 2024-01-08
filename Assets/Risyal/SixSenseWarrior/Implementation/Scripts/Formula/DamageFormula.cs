@@ -1,6 +1,4 @@
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.Formula;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Formula

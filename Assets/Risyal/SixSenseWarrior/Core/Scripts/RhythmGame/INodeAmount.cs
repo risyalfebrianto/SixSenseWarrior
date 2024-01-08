@@ -1,8 +1,4 @@
-﻿
-using System.Collections;
-using UnityEngine;
-
-namespace Assets.Risyal.SixSenseWarrior.Core.Scripts.RhythmGame
+﻿namespace Assets.Risyal.SixSenseWarrior.Core.Scripts.RhythmGame
 {
     /// <summary>
     /// Jumlah node yang ada sekarang.

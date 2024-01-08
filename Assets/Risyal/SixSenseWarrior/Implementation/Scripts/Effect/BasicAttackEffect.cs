@@ -2,8 +2,7 @@ using Assets.Risyal.SixSenseWarrior.Core.Scripts.Attribute;
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.EffectSystem;
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.Formula;
 using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Formula;
-using System.Collections;
-using System.Collections.Generic;
+using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.ObjectPooling;
 using UnityEngine;
 
 namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Effect
@@ -11,7 +10,7 @@ namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Effect
     /// <summary>
     /// Implementasi IEffect untuk basic attack.
     /// </summary>
-    public class BasicAttackEffect : MonoBehaviour, IEffect
+    public class BasicAttackEffect : PooledObject, IEffect
     {
         #region Variable
 

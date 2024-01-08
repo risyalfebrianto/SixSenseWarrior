@@ -1,6 +1,4 @@
 ﻿using Assets.Risyal.SixSenseWarrior.Core.Scripts.StatsSystem;
-using System.Collections;
-using UnityEngine;
 
 namespace Assets.Risyal.SixSenseWarrior.Core.Scripts.Attribute
 {

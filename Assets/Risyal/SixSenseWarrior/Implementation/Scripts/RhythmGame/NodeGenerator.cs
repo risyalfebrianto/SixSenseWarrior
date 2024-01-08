@@ -1,7 +1,6 @@
 ﻿using Assets.Risyal.SixSenseWarrior.Core.Scripts.FactorySystem;
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.RhythmGame;
 using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.RhythmGame

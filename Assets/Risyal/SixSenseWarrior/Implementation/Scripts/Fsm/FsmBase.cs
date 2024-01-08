@@ -1,4 +1,5 @@
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.Fsm;
+using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.General;
 using System.Linq;
 using UnityEngine;
 
@@ -18,6 +19,29 @@ namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Fsm
 
         #endregion
 
+        #region Main
+
+        /// <summary>
+        /// Untuk inisialisasi fsm.
+        /// </summary>
+        private void Initialize()
+        {
+            foreach (var state in _states)
+            {
+                state.InitializeState();
+
+                state.To<MonoBehaviour>().enabled = false;
+            }
+
+            CurrentState = _states[0];
+
+            CurrentState.EnterState();
+
+            CurrentState.To<MonoBehaviour>().enabled = true;
+        }
+
+        #endregion
+
         #region IFsm
 
         public IState CurrentState { get; private set; } = null;
@@ -30,12 +54,16 @@ namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Fsm
             {
                 CurrentState.ExitState();
 
+                CurrentState.To<MonoBehaviour>().enabled = false;
+
                 CurrentState = null;
             }
 
             CurrentState = state;
 
             CurrentState.EnterState();
+
+            CurrentState.To<MonoBehaviour>().enabled = true;
         }
 
         #endregion

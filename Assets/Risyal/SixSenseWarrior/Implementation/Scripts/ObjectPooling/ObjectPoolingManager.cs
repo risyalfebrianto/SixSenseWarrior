@@ -1,5 +1,4 @@
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.ObjectPooling;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,8 +1,7 @@
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.FactorySystem;
-using Assets.Risyal.SixSenseWarrior.Core.Scripts.ObjectPooling;
+using Assets.Risyal.SixSenseWarrior.Core.Scripts.Projectile;
 using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.General;
 using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.ObjectPooling;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +11,7 @@ namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Factory
     /// Implementasi IFactory untuk membuat projectile.
     /// </summary>
     [CreateAssetMenu(fileName = "ProjectileFactory", menuName = "Risyal/Assets/Factory")]
-    public class ProjectileFactory : ScriptableObject, IFactory<GameObject>
+    public class ProjectileFactory : ScriptableObject, IFactory<IProjectile>
     {
         #region Variable
 
@@ -26,13 +25,13 @@ namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Factory
 
         #region IFactory<GameObject>
 
-        public GameObject Create(params object[] parameters)
+        public IProjectile Create(params object[] parameters)
         {
             var newProjectile = objectPoolingManager.GetFreeObject();
 
             newProjectile.ActivateObject();
 
-            return newProjectile.To<GameObject>();
+            return newProjectile.To<IProjectile>();
         }
 
         #endregion

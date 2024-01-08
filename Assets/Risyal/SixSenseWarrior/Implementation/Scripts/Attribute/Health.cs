@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
+using Assets.Risyal.SixSenseWarrior.Core.Scripts.Attribute;
+using Assets.Risyal.SixSenseWarrior.Core.Scripts.StatsSystem;
+using System;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Attribute
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Implementasi IHealth.
+    /// </summary>
+    public class Health : MonoBehaviour, IHealth
     {
-        
-    }
+        #region IHealth
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public IStat Hp { get; private set; } = null;
+
+        public IStat MaxHp { get; private set; } = null;
+
+        public Action<float> OnHealthChanged { get; set; } = null;
+
+        #endregion
     }
 }

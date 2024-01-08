@@ -3,7 +3,6 @@ using Assets.Risyal.SixSenseWarrior.Core.Scripts.FactorySystem;
 using Assets.Risyal.SixSenseWarrior.Core.Scripts.ObjectPooling;
 using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.General;
 using Assets.Risyal.SixSenseWarrior.Implementation.Scripts.ObjectPooling;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,9 +46,7 @@ namespace Assets.Risyal.SixSenseWarrior.Implementation.Scripts.Factory
 
             effect.ActivateObject();
 
-            var effectObject = effect.To<MonoBehaviour>().GetComponent<IEffect>();
-
-            return effectObject;
+            return effect.To<IEffect>();
         }
 
         #endregion

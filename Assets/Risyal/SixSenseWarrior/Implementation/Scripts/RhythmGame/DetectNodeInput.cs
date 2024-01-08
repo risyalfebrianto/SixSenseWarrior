@@ -1,5 +1,4 @@
 ﻿using Assets.Risyal.SixSenseWarrior.Core.Scripts.RhythmGame;
-using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
